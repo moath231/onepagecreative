@@ -1,0 +1,152 @@
+:root {
+  --main-color: #19c8fa;
+  --sec-color: ;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-family: "Work Sans", sans-serif;
+  background-color: black;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 97px;
+}
+
+header {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.header img {
+  height: 55px;
+}
+.header .mainnav {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.header .mainnav .taggel-menu {
+  color: white;
+  font-size: 22px;
+}
+@media (min-width: 768px) {
+  .header .mainnav .taggel-menu {
+    display: none;
+  }
+}
+.header .mainnav ul {
+  display: flex;
+}
+.header .mainnav ul a {
+  color: white;
+  display: block;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+  padding: 40px 10px;
+  position: relative;
+  z-index: 2;
+}
+.header .mainnav ul a.active,
+.header .mainnav ul a:hover {
+  color: var(--main-color);
+  border-bottom: 2px solid var(--main-color);
+}
+@media (max-width: 767px) {
+  .header .mainnav ul {
+    display: none;
+  }
+  .header .mainnav .taggel-menu:hover + ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  .header .mainnav .taggel-menu:hover + ul li a {
+    padding: 15px;
+  }
+}
+.header .mainnav .from {
+  border-left: 1px solid white;
+  margin-left: 30px;
+  width: 40px;
+  height: 30px;
+  position: relative;
+}
+.header .mainnav .from i {
+  position: absolute;
+  /* margin-left: 18px; */
+  font-size: 20px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  right: 0;
+  color: white;
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #a2a2a2;
+  bottom: 0px;
+}
+
+@media (min-width: 268px) {
+  .container {
+    width: 394px;
+  }
+}
+@media (min-width: 540px) {
+  .container {
+    width: 530px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    width: 730px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 945px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1165px;
+  }
+}/*# sourceMappingURL=style.css.map */

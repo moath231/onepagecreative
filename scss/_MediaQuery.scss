@@ -1,0 +1,31 @@
+
+@media (min-width: 268px) {
+  .container{
+    width: 394px;
+  }
+}
+@media (min-width: 540px) {
+  .container{
+    width: 530px;
+  }
+}
+// small screen
+@media (min-width: 768px) {
+  .container{
+    width: 730px;
+  }
+}
+
+// medium screen
+@media (min-width: 992px) {
+  .container{
+    width: 945px;
+  }
+}
+
+// larg screen
+@media (min-width: 1200px) {
+  .container{
+    width: 1165px;
+  }
+}
