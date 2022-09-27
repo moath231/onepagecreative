@@ -16,7 +16,7 @@ html {
 body {
   font-family: 'Open Sans', sans-serif;
   font-family: 'Work Sans', sans-serif;
-  background-color: black;
+  // background-color: black;
 }
 
 ul {
@@ -31,4 +31,50 @@ ul {
   margin-left: auto;
   margin-right: auto;
   min-height: 97px;
+}
+
+.special-titel {
+  text-align: center;
+  .content {
+    h2 {
+      font-size: 50px;
+      font-weight: normal;
+      text-transform: uppercase;
+      margin: 0;
+      margin-bottom: 60px;
+      position: relative;
+    }
+    h2::before {
+      content: '';
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      border: 2px solid black;
+      border-radius: 50%;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -33px;
+      background-color: white;
+      z-index: 1;
+    }
+    h2::after {
+      content: '';
+      position: absolute;
+      width: 120px;
+      height: 2px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: black;
+      bottom: -25px;
+    }
+    p{
+      width: 550px;
+      color: #777;
+      line-height: 1.5;
+      max-width: 100%;
+      margin: 0 auto 100px;
+    }
+  }
+
+
 }

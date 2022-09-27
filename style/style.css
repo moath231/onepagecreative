@@ -16,7 +16,6 @@ html {
 body {
   font-family: "Open Sans", sans-serif;
   font-family: "Work Sans", sans-serif;
-  background-color: black;
 }
 
 ul {
@@ -31,6 +30,48 @@ ul {
   margin-left: auto;
   margin-right: auto;
   min-height: 97px;
+}
+
+.special-titel {
+  text-align: center;
+}
+.special-titel .content h2 {
+  font-size: 50px;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 60px;
+  position: relative;
+}
+.special-titel .content h2::before {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border: 2px solid black;
+  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -33px;
+  background-color: white;
+  z-index: 1;
+}
+.special-titel .content h2::after {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: black;
+  bottom: -25px;
+}
+.special-titel .content p {
+  width: 550px;
+  color: #777;
+  line-height: 1.5;
+  max-width: 100%;
+  margin: 0 auto 100px;
 }
 
 header {
@@ -164,6 +205,86 @@ header {
 .landing .text .content p {
   font-size: 14px;
   line-height: 2;
+}
+@media (max-width: 767px) {
+  .landing .text {
+    width: 100%;
+  }
+  .landing .text .content {
+    max-width: 100%;
+  }
+}
+.landing .change-backgroung {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+}
+@media (max-width: 767px) {
+  .landing .change-backgroung {
+    display: none;
+  }
+}
+.landing .fa-arrow-right {
+  right: 30px;
+}
+.landing .fa-arrow-left {
+  left: 30px;
+}
+.landing .bullets {
+  position: absolute;
+  left: 50%;
+  display: flex;
+  bottom: 30px;
+}
+.landing .bullets li {
+  width: 20px;
+  height: 20px;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.landing .bullets li.active {
+  background-color: var(--main-color);
+  border-color: var(--main-color);
+}
+
+.service {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+@media (min-width: 768px) {
+  .service .service-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    grid-column-gap: 40px;
+    grid-row-gap: 60px;
+  }
+}
+.service .service-content .srv-box {
+  display: flex;
+}
+.service .service-content .srv-box i {
+  margin-right: 30px;
+}
+.service .service-content .srv-box .text h3 {
+  color: var(--main-color);
+  margin-bottom: 17px;
+}
+.service .service-content .srv-box .text p {
+  line-height: 2;
+  color: #777;
+}
+@media (max-width: 767px) {
+  .service .service-content .srv-box {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .service .service-content .srv-box i {
+    margin: 0 0 40px;
+  }
 }
 
 @media (min-width: 268px) {
