@@ -79,13 +79,13 @@ header{
       width: 40px;
       height: 30px;
       position: relative;
-
+      color: white;
       i {
         position: absolute;
-        /* margin-left: 18px; */
         font-size: 20px;
         top: 50%;
         transform: translate(-50%, -50%);
+        // transform: translate(80%, 42%);
         right: 0;
         color: white;
       }
@@ -102,3 +102,5 @@ header{
   background-color: #a2a2a2;
   bottom: 0px;
 }
+
+

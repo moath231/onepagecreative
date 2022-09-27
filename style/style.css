@@ -1,6 +1,7 @@
 :root {
   --main-color: #19c8fa;
   --sec-color: rgb(15 116 143 /70%);
+  --gloubl-padding: 100px;
 }
 
 * {
@@ -146,10 +147,10 @@ header {
   width: 40px;
   height: 30px;
   position: relative;
+  color: white;
 }
 .header .mainnav .from i {
   position: absolute;
-  /* margin-left: 18px; */
   font-size: 20px;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -250,8 +251,8 @@ header {
 }
 
 .service {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: var(--gloubl-padding);
+  padding-bottom: var(--gloubl-padding);
 }
 @media (min-width: 768px) {
   .service .service-content {
@@ -288,8 +289,8 @@ header {
 }
 
 .serviceafter {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: var(--gloubl-padding);
+  padding-bottom: var(--gloubl-padding);
   height: 600px;
   position: relative;
   background-image: url(../imag/serviceafter.jpeg);
@@ -343,6 +344,128 @@ header {
 .serviceafter::before {
   content: "";
   background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.PORTFOLIO {
+  padding-top: var(--gloubl-padding);
+  padding-bottom: var(--gloubl-padding);
+}
+.PORTFOLIO .PORTFOLIO-content ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.PORTFOLIO .PORTFOLIO-content ul li {
+  margin-right: 12px;
+  padding: 15px;
+  color: black;
+  font-weight: bold;
+}
+.PORTFOLIO .PORTFOLIO-content ul li.active {
+  background-color: var(--main-color);
+  color: white;
+}
+.PORTFOLIO .PORTFOLIO-content ul li:hover {
+  background-color: var(--main-color);
+  color: white;
+  cursor: pointer;
+}
+.PORTFOLIO .PORTFOLIO-content .galary {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-row-gap: 1px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.PORTFOLIO .PORTFOLIO-content .galary .imag {
+  position: relative;
+  overflow: hidden;
+}
+.PORTFOLIO .PORTFOLIO-content .galary .imag img {
+  max-width: 100%;
+}
+.PORTFOLIO .PORTFOLIO-content .galary .imag .text {
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  padding: 15px;
+  bottom: -150px;
+  transition: 0.3s;
+}
+.PORTFOLIO .PORTFOLIO-content .galary .imag .text h4 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.PORTFOLIO .PORTFOLIO-content .galary .imag .text p {
+  color: var(--main-color);
+}
+.PORTFOLIO .PORTFOLIO-content .galary .imag:hover .text {
+  bottom: 0px;
+}
+.PORTFOLIO .PORTFOLIO-content .galary .imag:hover img {
+  transform: rotate(3deg) scale(1.1);
+}
+.PORTFOLIO .PORTFOLIO-content .more {
+  color: white;
+  background-color: var(--main-color);
+  padding: 15px 20px;
+  margin: 30px auto;
+  width: fit-content;
+  text-transform: uppercase;
+}
+.PORTFOLIO .PORTFOLIO-content .more .morelink {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.video {
+  position: relative;
+  overflow: hidden;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: center;
+}
+.video .video {
+  width: 100%;
+}
+.video .text {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 50px;
+  color: white;
+  z-index: 1;
+  background-color: var(--sec-color);
+  text-align: center;
+}
+.video .text h2 {
+  text-transform: uppercase;
+  font-weight: normal;
+  margin: 0 0 30px;
+}
+.video .text p {
+  margin-bottom: 30px;
+}
+.video .text button {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.video::after {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.4);
   position: absolute;
   top: 0;
   left: 0;

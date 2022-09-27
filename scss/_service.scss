@@ -1,6 +1,6 @@
 .service {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: var(--gloubl-padding);
+  padding-bottom: var(--gloubl-padding);
 
   @media (min-width: 768px) {
     .service-content {

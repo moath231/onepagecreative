@@ -1,6 +1,6 @@
 .serviceafter {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: var(--gloubl-padding);
+  padding-bottom: var(--gloubl-padding);
   height: 600px;
   position: relative;
   background-image: url(../imag/serviceafter.jpeg);
