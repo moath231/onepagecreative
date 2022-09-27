@@ -1,6 +1,6 @@
 :root {
   --main-color: #19c8fa;
-  --sec-color: ;
+  --sec-color: rgb(15 116 143 /70%);
 }
 
 * {
@@ -285,6 +285,69 @@ header {
   .service .service-content .srv-box i {
     margin: 0 0 40px;
   }
+}
+
+.serviceafter {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  height: 600px;
+  position: relative;
+  background-image: url(../imag/serviceafter.jpeg);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  color: white;
+  overflow: hidden;
+}
+.serviceafter .imag {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  flex: 1;
+}
+.serviceafter .imag img {
+  position: relative;
+  bottom: -150px;
+}
+@media (max-width: 767px) {
+  .serviceafter .imag {
+    display: none;
+  }
+}
+.serviceafter .text {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  color: white;
+  padding: 50px;
+  background-color: var(--sec-color);
+}
+.serviceafter .text h2 {
+  font-weight: normal;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+.serviceafter .text ul li {
+  margin: 10px 0px;
+}
+.serviceafter .text ul li::before {
+  font-family: "font awesome 5 free";
+  content: "\f108";
+  font-weight: 900;
+  color: white;
+  margin-right: 20px;
+  position: relative;
+  top: 1px;
+}
+
+.serviceafter::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 @media (min-width: 268px) {
