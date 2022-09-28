@@ -1,0 +1,50 @@
+footer {
+  padding-top: var(--gloubl-padding);
+  padding-bottom: 20px;
+  background-image: url("../imag/darkfooter.jpg");
+  background-size: cover;
+  position: relative;
+  .container{
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+
+    img{
+      width: 200px;
+    }
+
+    .text{
+      margin-bottom: 40px;
+      font-size: 25px;
+      h2{
+        width: fit-content;
+        margin: 20px auto;
+        border-bottom: 1px solid white;
+      }
+      .icon{
+        i{
+          margin-right: 12px;
+        }
+        i:hover{
+          color: var(--main-color);
+          cursor: pointer;
+          transition: 0.3s;
+          font-size: 30px;
+        }
+      }
+    }
+
+  }
+}
+
+footer::after {
+  content: '';
+  background-color: rgb(0 0 0 /70%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+}

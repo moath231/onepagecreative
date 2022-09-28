@@ -1,0 +1,264 @@
+.aboutUs {
+  padding-top: var(--gloubl-padding);
+
+  .about-content {
+    overflow: hidden;
+    align-items: center;
+
+    img {
+      position: relative;
+      bottom: -120px;
+      margin-top: -120px;
+      max-width: 100%;
+    }
+
+    @media (max-width:767px) {
+      img {
+        bottom: -60px;
+        margin-top: -60px;
+      }
+    }
+
+  }
+}
+
+.statstec {
+  padding-top: var(--gloubl-padding);
+  padding-bottom: var(--gloubl-padding);
+  align-items: center;
+  background-image: url("../imag/purbel.jpg");
+  background-size: cover;
+  position: relative;
+
+  .container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 1;
+
+    .box {
+      color: white;
+      padding: 50px;
+      background-color: var(--sec-color);
+
+      i {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        background-color: black;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        margin: 0 auto 30px;
+      }
+
+      .number {
+        font-size: 50px;
+        font-weight: bold;
+        margin: 0 0 20px;
+        text-align: center;
+      }
+
+      p {
+        font-size: 14px;
+        text-align: center;
+      }
+    }
+
+    @media (max-width:767px) {
+      .box {
+        flex-basis: 100%;
+      }
+    }
+
+    @media (min-width:768px) {
+      .box {
+        flex-basis: 50%;
+      }
+    }
+
+    @media (min-width:992px) {
+      .box {
+        flex-basis: 25%;
+      }
+    }
+  }
+
+}
+
+.statstec::before {
+  content: '';
+  background-color: rgb(0 0 0 /70%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+.skills {
+  padding-top: var(--gloubl-padding);
+  padding-bottom: var(--gloubl-padding);
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    h3 {
+      font-size: 30px;
+      margin: 0 0 40px 0;
+      text-transform: uppercase;
+      font-weight: normal;
+      color: #1f2021;
+      text-align: center;
+    }
+
+    p {
+      color: #777;
+      margin: 0 auto 61px;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    .testimoneals {
+      // width: 500px;
+      flex-basis: 45%;
+
+      .content {
+        display: flex;
+        display: flex;
+        margin-bottom: 65px;
+        margin-top: 80px;
+
+        .text {
+          text-align: left;
+          line-height: 1.3;
+          color: #1f2021;
+          font-size: 13px;
+          border-bottom: 1px solid #ccc;
+
+          p {
+            text-align: right;
+            margin: 0;
+          }
+        }
+
+        img {
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          margin-right: 65px;
+          max-width: 100%;
+        }
+      }
+
+      ul {
+        display: flex;
+        justify-content: center;
+
+        li {
+          width: 15px;
+          height: 15px;
+          // background-color: black;
+          border-radius: 50%;
+          margin-right: 10px;
+          border: 1px solid black;
+        }
+
+        li.active {
+          background-color: var(--main-color);
+          border: 1px solid var(--main-color);
+        }
+      }
+
+    }
+
+    .ourskills {
+      flex-basis: 45%;
+
+      .prog-holder {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        margin-bottom: 15px;
+
+        h4 {
+          margin-bottom: 10px;
+        }
+
+        .prog {
+          background-color: #dedadc;
+          width: 100%;
+          height: 25px;
+
+          span {
+            width: 90%;
+            height: 100%;
+            background-color: #19c8f9;
+            display: block;
+            position: relative;
+          }
+        }
+
+        span::after {
+          content: attr(data-progress);
+          position: absolute;
+          color: white;
+          background-color: black;
+          font-size: 12px;
+          padding: 5px 7px;
+          font-weight: bold;
+          top: -33px;
+          right: -16px;
+          text-align: center;
+        }
+
+        span::before {
+          content: "";
+          position: absolute;
+          top: -10px;
+          right: -5px;
+          border-width: 7px;
+          border-style: solid;
+          border-color: #000 transparent transparent transparent;
+        }
+      }
+    }
+  }
+}
+
+
+
+.quots {
+  padding-top: var(--gloubl-padding);
+  padding-bottom: var(--gloubl-padding);
+  background-image: url("../imag/purbel.jpg");
+  background-size: cover;
+  max-width: 100%;
+  position: relative;
+  text-align: center;
+
+  .container {
+    color: white;
+    position: relative;
+    z-index: 2;
+    q {
+      font-size: 30px;
+      margin-bottom: 20px;
+      display: block;
+    }
+  }
+}
+
+.quots::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 /70%);
+  z-index: 1;
+}

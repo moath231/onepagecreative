@@ -1,0 +1,203 @@
+.price {
+  padding-top: var(--gloubl-padding);
+  padding-bottom: var(--gloubl-padding);
+
+  .price-content {
+    .price-table {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 30px;
+
+      .plan {
+        background-color: #FCFCFC;
+        text-align: center;
+
+        .head {
+          padding: 40px 20px;
+          border-top: 1px solid var(--main-color);
+          border-bottom: 1px solid var(--main-color);
+
+          h3 {
+            font-weight: normal;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+          }
+
+          span {
+            font-size: 60px;
+            position: relative;
+            font-weight: bold;
+          }
+
+          span::before {
+            content: '$';
+            font-size: 25px;
+            font-weight: normal;
+            top: -40px;
+            margin-right: 15px;
+            position: relative;
+          }
+
+          span::after {
+            content: '/Mo';
+            font-size: 25px;
+            font-weight: normal;
+            margin-right: 15px;
+            position: relative;
+          }
+
+        }
+
+        ul {
+          border-bottom: 1px solid var(--main-color);
+
+          li {
+            padding: 20px;
+            position: relative;
+          }
+
+          li:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            width: 120px;
+            height: 1px;
+            background-color: var(--main-color);
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+          }
+        }
+
+        .footer {
+          a {
+            display: block;
+            text-decoration: none;
+            padding: 20px 20px;
+            border: 1px solid var(--main-color);
+            width: fit-content;
+            margin: 30px auto;
+            color: black;
+          }
+
+          a:hover {
+            background-color: var(--main-color);
+            color: white;
+            transition: 0.3s;
+          }
+        }
+      }
+    }
+
+    .price-text {
+
+      p {
+        text-align: center;
+        margin: 50px auto 20px;
+        font-size: 20px;
+        display: block;
+      }
+
+      a {
+        display: block;
+        width: fit-content;
+        margin: 20px auto;
+        background-color: var(--main-color);
+        color: white;
+        padding: 15px 30px;
+        text-decoration: none;
+      }
+
+      a:hover {
+        padding: 18px 33px;
+        background-color: black;
+        color: white;
+        transition: 0.3s;
+
+      }
+    }
+  }
+}
+
+
+
+.afterprice {
+  padding-top: var(--gloubl-padding);
+  padding-bottom: var(--gloubl-padding);
+  background-image: url("../imag/darkstar.jpg");
+  background-size: cover;
+  max-width: 100%;
+  position: relative;
+
+  .container {
+    color: white;
+    position: relative;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+
+    form {
+      display: flex;
+      position: relative;
+      min-width: 50%;
+      max-width: 100%;
+
+      i {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 25px;
+        font-size: 30px;
+      }
+
+      input[type="email"] {
+        border: 1px solid white;
+        background: none;
+        padding: 20px 20px 20px 60px;
+        caret-color: var(--main-color);
+        width: calc(100% - 130px);
+        color: white;
+      }
+
+      input[type="email"]::placeholder {
+        color: white;
+      }
+
+      input[type="submit"] {
+        width: 130px;
+        background-color: var(--main-color);
+        color: white;
+        padding: 10px 20px;
+        border: 1px solid white;
+        text-transform: uppercase;
+      }
+      input[type="submit"]:hover{
+        font-weight: bold;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: black;
+        color: white;
+        transition: 0.5s;
+      }
+
+      input[type="email"]:focus,
+      input[type="email"]:focus {
+        outline: none;
+      }
+    }
+
+    span {
+      margin-left: 50px;
+      line-height: 2;
+    }
+  }
+}
+
+.afterprice::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 /70%);
+}
